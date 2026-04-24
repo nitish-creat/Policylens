@@ -1,0 +1,117 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-900 text-navy-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-syne;
+  }
+
+  p,
+  span,
+  div,
+  a,
+  button,
+  input,
+  textarea {
+    @apply font-plex-sans;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-navy-800 border border-electric-500/20 rounded-lg p-5;
+  }
+
+  .card-hover {
+    @apply hover:border-electric-500/40 hover:shadow-glow-blue transition;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full font-medium text-sm;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition focus:outline-none focus:ring-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-electric-500 hover:bg-electric-400 text-navy-900;
+  }
+
+  .btn-secondary {
+    @apply btn bg-navy-700 hover:bg-navy-600 text-electric-300;
+  }
+
+  .input {
+    @apply bg-navy-800 border border-electric-500/20 rounded px-3 py-2 text-navy-100 focus:outline-none focus:border-electric-500/50 focus:ring-2 focus:ring-electric-500/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-electric-400 to-amber-400 bg-clip-text text-transparent;
+  }
+
+  .glow-electric {
+    @apply shadow-glow-blue;
+  }
+
+  .glow-amber {
+    @apply shadow-glow-amber;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 29, 46, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(14, 165, 233, 0.3);
+  color: #e0f2fe;
+}
