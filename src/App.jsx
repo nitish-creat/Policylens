@@ -17,7 +17,7 @@ function App() {
   return (
     <PolicyProvider>
       <AlertProvider>
-        <Router>
+        <Router basename="/Policylens">
           <div className="bg-navy-900 text-navy-100 min-h-screen font-plex-sans">
             <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             <div className="flex">
