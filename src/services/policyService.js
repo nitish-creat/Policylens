@@ -85,17 +85,18 @@ export const policyService = {
   getCategories: async () => {
     return [
       "Healthcare",
-      "Tax",
-      "Environment",
+      "Infrastructure",
       "Education",
+      "Environment",
       "Labor",
-      "Defense",
+      "Agriculture",
+      "Tax",
     ];
   },
 
   // Get distinct countries
   getCountries: async () => {
-    return Array.from(new Set(mockPolicies.map((p) => p.country))).sort();
+    return ["India"];
   },
 
   // Get distinct statuses
